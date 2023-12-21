@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+
+<body>
+  
+  <div style="text-align: center;">
+    <h1 >Weather forecast page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+    
+        <input type="text" class="form-control" id="city" name="city" placeholder="search city">
+        <input type="submit" value="Submit">
+        
+    <form>
+        <div class="row">
+            {% if data.city is not None %}
+            <div class="d-flex flex-column justify-content-center" style="align-items: center;">
+              <h1>city: {{data.city | capfirst}}</h1>
+              
+              <h3>Description: {{data.desc | capfirst}}</h1>
+              <div ><img style="height: 100px; width:100px" src = 'http://openweathermap.org/img/w/{{data.icon}}.png'></div>
+              
+              <h3>Temperature: {{data.temp}}C</h3>
+              <h3>Humidity: {{data.humidity}}</h3>
+            </div>
+            {% endif %}
+          </div>
+  </div>
+  
+
+  
+</body>
+
+</html>
