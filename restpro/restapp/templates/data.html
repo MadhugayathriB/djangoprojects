@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div style="background-image:url('https://static.vecteezy.com/system/resources/thumbnails/003/556/790/small/banner-with-single-grilled-sausage-with-mustard-on-it-and-red-hot-chili-pepper-put-on-a-metal-modern-fork-at-solid-pink-color-background-with-copy-space-for-text-concept-of-street-food-and-cuisine-photo.jpg');background-size: cover;height:100vh">
+{% for rev in reviews %}
+<div >
+    <p style="color:white;font-weight:bold">{{rev.name}}</p>
+    <p style="color:white ;font-weight:bold">{{rev.foodordered}}</p>
+    <p style="color:white ;font-weight:bold">{{rev.favouritedish}}</p>
+    <p style="color:white ;font-weight:bold">{{rev.review}}</p>
+    <p>---------------------------</p>
+
+</div>
+{% endfor %}
+</div>
+
+</body>
+</html>
