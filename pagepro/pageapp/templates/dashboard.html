@@ -3,6 +3,11 @@
 <body>
 <div style="background-color: pink;color:black;padding:70px;background-size: cover;height: 100vh;">
     <h1>WELCOME TO YOUR PAGE</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" >LOGOUT</button>
+    </form>
+
 
 
 </div>
